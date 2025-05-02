@@ -61,11 +61,11 @@ def refine_with_snake(slice_img, init_snake, alpha = 0.015, beta=10, gamma=0.001
    # sobel, scharr, prewitt, roberts, laplacian of gaussian, difference of gaussian, canny, morph (otsu vs edge seed)
 
 
-def has_uterus(slice_img, min_area=?): #area based initialization
+def has_uterus(slice_img, min_area=2500): #area based initialization
     return mask.sum() >= min_area
 
 
-def edge_seed_contour(slice_img, method=?, **kw):
+def edge_seed_contour(slice_img, method="sobel", **kw):
     if method == 'sobel':
            edges = filters.sobel(slice_img)
     elif method == 'scharr':
