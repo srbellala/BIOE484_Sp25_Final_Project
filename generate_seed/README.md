@@ -35,29 +35,19 @@ uterus-segmentation-seeding/
 
 ### 1. Install dependencies
 
-```bash
-pip install -r requirements.txt
-```
-
 ### 2. Run the Frangi pipeline
 
 ```bash
 python frangi_pipeline/run_frangi_pipeline.py
 ```
 
-- Applies multi-scale Frangi vesselness filter  
-- Performs morphological closing  
-- Extracts two symmetric seed points based on region properties
+or
 
 ### 3. Run the Morphology-based pipeline
 
 ```bash
 python morphology_pipeline/morphology_based_seeding.py
 ```
-
-- Uses Otsu thresholding and morphological cleanup  
-- Filters regions by area and aspect ratio  
-- Places seed(s) at object centroids
 
 ---
 
