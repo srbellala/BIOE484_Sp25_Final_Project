@@ -1,13 +1,13 @@
 # Uterus Segmentation Seed Generation
 
-This project provides two modular pipelines to generate seed points for segmenting the **mouse uterus** from **T2-weighted MRI slices**. The seeds can be used to initialize segmentation algorithms like watershed, region growing, or nnU-Net.
+This project provides two modular pipelines to generate seed points for segmenting the **mouse uterus** from **T2***-weighted MRI slices**. The seeds can be used to initialize segmentation algorithms like watershed, region growing, or nnU-Net.
 
 ## 🧠 Purpose
 
 Segmenting the mouse uterus from whole-body MR scans can be challenging due to variations in image contrast and abdominal signal. This toolkit offers two adaptive pipelines:
 
-- **Frangi-based pipeline**: Ideal for images where the abdominal cavity contains significant signal (e.g. intestines, bladder).
-- **Morphology-based pipeline**: Best suited when the abdominal cavity appears mostly empty (dark background), and uterus is a prominent blob.
+- **Frangi-based pipeline**: Ideal for images where the abdominal cavity contains significant signal from fat.
+- **Morphology-based pipeline**: Best suited when the abdominal cavity's fat is suppressed, and uterus is a prominent blob.
 
 ---
 
