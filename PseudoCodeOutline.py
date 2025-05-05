@@ -70,10 +70,14 @@ def edge_seed_contour(slice_img, method="sobel", **kw):
            edges = filters.sobel(slice_img)
     elif method == 'scharr':
          edges = filters.scharr(slice_img)
-    elif method == 'prewitt':
-    elif method == 'roberts':
-    elif method == 'log':
+    #elif method == 'prewitt':
+
+    #elif method == 'roberts':
+
+    #elif method == 'log':
+
     elif method == 'dog':
+
         g1 = gaussian()
         g2 = gaussian()
         edges = np.abs(g1-g2)
@@ -94,6 +98,6 @@ def edge_seed_contour(slice_img, method="sobel", **kw):
         raise RuntimeError(f"what the heck no contours from {method}")
     return max(contours, key=len)
 
-def contour_to_mask(contour, shape)
+def contour_to_mask(contour, shape):
     #rasterize to shape
     return mask
